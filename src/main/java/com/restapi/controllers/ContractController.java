@@ -19,9 +19,6 @@ public class ContractController {
 
     @GetMapping("/contracts")
     List<Contract> getAllContracts() {
-        List<String> list = new ArrayList<>();
-        List<Contract> contracts = contractRepository.findAll();
-        list.add("one");
-        return contracts;
+        return contractRepository.findAll();
     }
 }
